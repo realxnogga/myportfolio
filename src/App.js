@@ -9,9 +9,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return ( 
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
     <Routes>
-    
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />       
           <Route path="/contactme" element={<ContactMePage />} />
