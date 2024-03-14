@@ -14,7 +14,7 @@ export const LandingPage = () => {
             <Header />
             <Hero/>
             <About />
-            <Education/>git   
+            <Education/> 
             <Foot />
         </>
 
