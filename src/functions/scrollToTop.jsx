@@ -30,6 +30,6 @@ export const BackToTop = () => {
     }, []);
 
     return (
-            <FaArrowUp onClick={scrollToTop} className='absolute bottom-10 right-10 text-2xl text-white hover:text-purple-700' />   
+            <FaArrowUp onClick={scrollToTop} className='absolute mobile:top-5 mobile:right-5 mobile:text-[1.2rem] bottom-10 right-10 text-2xl text-white hover:text-purple-700' />   
     )
 }

@@ -9,7 +9,7 @@ import { FaHtml5 } from "react-icons/fa";
 export const About = () => {
 
     return (
-        <div className="bg-gray-800 h-fit w-full p-10">
+        <div className="bg-gray-900 h-fit w-full p-10">
             <h3 className="text-purple-700 font-bold text-[4rem] tablet:text-[2.5rem] mobile:text-[2rem]">ABOUT ME</h3>
             <p className="text-gray-400 text-[1.2rem] mobile:text-[1rem]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam doloribus tempora necessitatibus corrupti? Dolores at voluptatum aut expedita incidunt cumque! Nostrum, repellendus corrupti? Sunt, pariatur. Ex a odit officia. Dolores at voluptatum aut expedita incidunt cumque! Nostrum, repellendus corrupti? Sunt, pariatur. Ex a odit officia. Dolores at voluptatum aut expedita incidunt cumque! Nostrum, repellendus corrupti? Sunt, pariatur. Ex a odit officia.

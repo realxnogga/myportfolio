@@ -14,7 +14,7 @@ export const Hero = () => {
   }
  
   return (
-    <div className='h-[40rem] w-[full] bg-gray-900 p-5 flex flex-row tablet:h-[30rem] mobile:h-[25rem] tablet:flex-col'>
+    <div className='h-[40rem] w-[full] bg-gray-800 p-5 flex flex-row tablet:h-[30rem] mobile:h-[25rem] tablet:flex-col'>
       <section className='h-full w-full flex items-center justify-center'>
         <div className="bg-blue-500 h-[17rem] w-[17rem] tablet:h-[13rem] tablet:w-[13rem]  mobile:h-[10rem] mobile:w-[10rem] rounded-[50%]">
 

@@ -12,7 +12,7 @@ export const ContactMe = () => {
     return (
         <div className="bg-gray-800 h-fit w-screen flex items-center justify-center">
 
-            <div className='bg-gray-900 h-fit my-24 w-[50rem] max-w-[90%] flex flex-row justify-center flex-wrap'>
+            <div className='bg-gray-900 h-fit my-12 w-[50rem] max-w-[90%] flex flex-row justify-center flex-wrap'>
 
                 <form className=' h-full w-[25rem] p-10 flex flex-col justify-center gap-y-10' action="">
                     <FloatingLabel className='text-gray-400' variant="standard" label="Full Name" />
@@ -33,19 +33,27 @@ export const ContactMe = () => {
                     </section>
                     <section className=' flex flex-row flex-wrap gap-x-5'>
                         <Tooltip content="Codewars" animation="duration-500">
-                            <SiCodewars className='text-gray-400 text-2xl hover:text-orange-400' />
+                            <a href="https://www.codewars.com/users/Realxnogga">
+                                <SiCodewars className='text-gray-400 text-2xl hover:text-orange-400' />
+                            </a>
                         </Tooltip>
 
                         <Tooltip content="Facebook" animation="duration-500">
-                            <FaFacebookSquare className='text-gray-400 text-2xl hover:text-blue-600' />
+                            <a href="https://www.facebook.com/alupihang.dagat.142/">
+                                <FaFacebookSquare className='text-gray-400 text-2xl hover:text-blue-600' />
+                            </a>
                         </Tooltip>
 
                         <Tooltip content="Frontend Mentor" animation="duration-500">
-                            <SiFrontendmentor className='text-gray-400 text-2xl hover:text-green-300' />
+                            <a href="https://www.frontendmentor.io/profile/unknownhatdog">
+                                <SiFrontendmentor className='text-gray-400 text-2xl hover:text-green-300' />
+                            </a>
                         </Tooltip>
 
                         <Tooltip content="GitHub" animation="duration-500">
-                            <FaGithub className='text-gray-400 text-2xl hover:text-black' />
+                            <a href="https://github.com/unknownhatdog">
+                                <FaGithub className='text-gray-400 text-2xl hover:text-black' />
+                            </a>
                         </Tooltip>
                     </section>
                 </div>
