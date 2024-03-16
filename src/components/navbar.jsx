@@ -14,7 +14,7 @@ export const Header = () => {
     mobile:
     mobile:
 
-    bg-gray-900 w-screen backdrop-blur backdrop-brightness-75 px-10'>
+    !bg-gray-900 w-screen backdrop-blur px-10'>
       <Navbar.Brand>
         <img className="animate-spin spin h-[3rem] w-[3rem] mobile:h-[2rem] mobile:w-[2rem]" src={`${require('../assets/icons/logo192.png')}`} alt="" />
       </Navbar.Brand>
