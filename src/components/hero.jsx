@@ -15,9 +15,13 @@ export const Hero = () => {
   }
 
   return (
+   
+
     <div className='h-[40rem] w-[full] bg-gray-800 p-5 flex flex-row tablet:h-[30rem] mobile:h-[25rem] tablet:flex-col'>
-       
+     
       <section className='h-full w-full flex items-center justify-center'>
+      <Fade delay={200} fraction={0} cascade damping={1e-1}>
+
         <div className="bg-blue-500 h-[17rem] w-[17rem] tablet:h-[13rem] tablet:w-[13rem]  mobile:h-[10rem] mobile:w-[10rem] rounded-[50%]">
 
           <Carousel className='rounded-[50%]' leftControl={'<'} rightControl={'>'} indicators={false}>
@@ -26,11 +30,10 @@ export const Hero = () => {
             <img src={`${require('../assets/userImage/userProfile1.jpg')}`} alt="" />
           </Carousel>
         </div>
-
-
-
+      </Fade>
       </section>
       <section className='h-full w-full flex items-center justify-center'>
+      <Fade delay={200} fraction={0} cascade damping={1e-1}>
 
         <p className='text-gray-400 font-semibold text-[4rem] tablet:text-center tablet:text-[2.5rem] mobile:text-lg'>
           <p>
@@ -48,9 +51,10 @@ export const Hero = () => {
             </NavLink>
           </div>
         </p>
-
+        </Fade>
       </section>
      
+    
     </div>
   )
 }

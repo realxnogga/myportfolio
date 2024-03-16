@@ -6,13 +6,16 @@ import { SiFrontendmentor } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { Tooltip } from 'flowbite-react';
 import { FloatingLabel } from 'flowbite-react';
+import { Fade, Slide } from "react-awesome-reveal";
 
 export const ContactMe = () => {
 
     return (
         <div className="bg-gray-800 h-fit w-screen flex items-center justify-center">
+            
 
             <div className='bg-gray-900 h-fit my-12 w-[50rem] max-w-[90%] flex flex-row justify-center flex-wrap'>
+            <Fade delay={200} fraction={0} cascade damping={1e-1}>
 
                 <form className=' h-full w-[25rem] p-10 flex flex-col justify-center gap-y-10' action="">
                     <FloatingLabel className='text-gray-400' variant="standard" label="Full Name" />
@@ -57,9 +60,12 @@ export const ContactMe = () => {
                         </Tooltip>
                     </section>
                 </div>
+                </Fade>
 
 
             </div>
+           
+
         </div>
     )
 }

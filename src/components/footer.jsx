@@ -6,6 +6,7 @@ import { SiFrontendmentor } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { Button, Tooltip } from 'flowbite-react';
 import { BackToTop } from '../functions/scrollToTop';
+import { Fade, Slide } from "react-awesome-reveal";
 
 
 export const Foot = () => {
@@ -16,9 +17,19 @@ export const Foot = () => {
             <BackToTop />
 
             <section className='h-fit w-[27rem] flex flex-col items-center text-center'>
-                <h3 className='font-bold text-[2rem] text-gray-400 mobile:text-[1rem]'>Foolish <span className='text-purple-700'>Developer</span> </h3>
+            <Fade delay={200} fraction={0} cascade damping={1e-1}>
+                <h3 className='font-bold text-[2rem] text-gray-400 mobile:text-[1rem]'>
+                    
+                    Foolish <span className='text-purple-700'>Developer</span> </h3>
+                    
+            </Fade>
+            <Fade delay={200} fraction={0} cascade damping={1e-1}>
 
                 <h5 className='text-gray-400 italic mobile:text-[.7rem]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore consequatur minus exercitationem doloribus quam labore, nesciunt recusandae obcaecati odit doloremque.</h5>
+            </Fade>
+            
+            <Fade delay={200} fraction={0} cascade damping={1e-1}>
+
                 <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
                     <Tooltip content="Codewars" animation="duration-500">
                         <a href="https://www.codewars.com/users/Realxnogga">
@@ -44,6 +55,8 @@ export const Foot = () => {
                         </a>
                     </Tooltip>
                 </div>
+                </Fade>
+            
             </section>
 
         </Footer>
