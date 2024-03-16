@@ -2,6 +2,7 @@
 import { Carousel } from 'flowbite-react';
 import { Button } from 'flowbite-react';
 import { NavLink } from 'react-router-dom';
+import { Fade, Slide } from "react-awesome-reveal";
 
 import { ChangeText } from '../functions/changetext';
 
@@ -12,7 +13,7 @@ export const Hero = () => {
     Text2: 'Learner',
     Text3: 'Student',
   }
- 
+
   return (
     <div className='h-[40rem] w-[full] bg-gray-800 p-5 flex flex-row tablet:h-[30rem] mobile:h-[25rem] tablet:flex-col'>
       <section className='h-full w-full flex items-center justify-center'>
@@ -31,8 +32,17 @@ export const Hero = () => {
       <section className='h-full w-full flex items-center justify-center'>
 
         <p className='text-gray-400 font-semibold text-[4rem] tablet:text-center tablet:text-[2.5rem] mobile:text-lg'>
-          <p> I'm <span className='mobile:text-[3rem] font-bold text-[4rem] text-purple-700 '> <ChangeText {...textValue}/> </span></p>
-          <p>a third year BSIT student </p>
+          <p>
+            
+              I'm <span className='mobile:text-[3rem] font-bold text-[4rem] text-purple-700 '>
+                <ChangeText {...textValue} /> </span>
+            
+          </p>
+          <p>
+            <Fade delay={200} fraction={0} cascade damping={1e-1}>
+              a third year BSIT student
+            </Fade>
+          </p>
           <div className='w-full mt-5 flex tablet:justify-center'>
             <NavLink to={'/contactme'}>
               <Button className='bg-green-500' outline gradientDuoTone="purpleToBlue"> Contact Me </Button>

@@ -5,17 +5,26 @@ import { IoLogoJavascript } from "react-icons/io";
 import { SiTailwindcss } from "react-icons/si";
 import { FaCss3 } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
+import { Fade, Slide } from "react-awesome-reveal";
 
 export const About = () => {
 
     return (
         <div className="bg-gray-900 h-fit w-full p-10">
-            <h3 className="text-purple-700 font-bold text-[4rem] tablet:text-[2.5rem] mobile:text-[2rem]">ABOUT ME</h3>
+            <h3 className="text-purple-700 font-bold text-[4rem] tablet:text-[2.5rem] mobile:text-[2rem]">
+                <Fade delay={200} fraction={0} cascade damping={1e-1}>
+                    ABOUT ME
+                </Fade>
+            </h3>
             <p className="text-gray-400 text-[1.2rem] mobile:text-[1rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam doloribus tempora necessitatibus corrupti? Dolores at voluptatum aut expedita incidunt cumque! Nostrum, repellendus corrupti? Sunt, pariatur. Ex a odit officia. Dolores at voluptatum aut expedita incidunt cumque! Nostrum, repellendus corrupti? Sunt, pariatur. Ex a odit officia. Dolores at voluptatum aut expedita incidunt cumque! Nostrum, repellendus corrupti? Sunt, pariatur. Ex a odit officia.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam doloribus tempora necessitatibus corrupti? Dolores at voluptatum aut expedita incidunt cumque! Nostrum, repellendus corrupti? Sunt, pariatur. Ex a odit officia. Dolores at voluptatum aut expedita incidunt cumque!
             </p>
             <div className="mt-20 mobile:mt-8">
-                <h3 className="text-purple-700 font-bold text-center text-[4rem] tablet:text-[2.5rem] mobile:text-[2rem]">MY SKILLS</h3>
+                <h3 className="text-purple-700 font-bold text-center text-[4rem] tablet:text-[2.5rem] mobile:text-[2rem]">
+                    <Fade delay={200} fraction={0} cascade damping={1e-1}>
+                        MY SKILLS
+                    </Fade>
+                </h3>
 
 
                 <div className="flex flex-row flex-wrap justify-center gap-8">
