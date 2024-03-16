@@ -18,6 +18,7 @@ export const About = () => {
             </h3>
             <p className="text-gray-400 text-[1.2rem] mobile:text-[1rem]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam doloribus tempora necessitatibus corrupti? Dolores at voluptatum aut expedita incidunt cumque! Nostrum, repellendus corrupti? Sunt, pariatur. Ex a odit officia. Dolores at voluptatum aut expedita incidunt cumque!
+                Ullam numquam doloribus tempora necessitatibus corrupti? Dolores at voluptatum aut expedita incidunt cumque! Nostrum, repellendus corrupti? Sunt, pariatur. Ex a odit officia. Dolores at voluptatum aut expedita incidunt cumque!
             </p>
             <div className="mt-20 mobile:mt-8">
                 <h3 className="text-purple-700 font-bold text-center text-[4rem] tablet:text-[2.5rem] mobile:text-[2rem]">
@@ -26,7 +27,7 @@ export const About = () => {
                     </Fade>
                 </h3>
 
-
+                <Fade delay={200} fraction={0} cascade damping={1e-1}>
                 <div className="flex flex-row flex-wrap justify-center gap-8">
 
                     <div className="tablet:h-[17rem] tablet:w-[15rem] mobile:h-[7rem] mobile:w-[4rem] mo h-[20rem] w-[17rem] bg-gray-600 hover:bg-gray-700 rounded-[1rem]  shadow-[5px_5px_0px_0px_rgba(109,40,217)]
@@ -71,21 +72,8 @@ export const About = () => {
                         <h3 className="text-orange-500 text-[3rem] font-bold mobile:text-[1.2rem]">HTML</h3>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
-
+                </Fade>
 
             </div>
         </div>
