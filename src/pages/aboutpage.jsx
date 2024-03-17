@@ -7,10 +7,10 @@ import { H } from "../components/nav"
 export const AboutPage = () => {
 
     return (
-        <>
+        <div className="bg-gray-800">
             <H />
             <About />
             <Foot />
-        </>
+        </div>
     )
 }

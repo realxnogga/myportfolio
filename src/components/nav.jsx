@@ -1,13 +1,17 @@
 import { NavLink } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import { FiMenu } from "react-icons/fi";
-import { ShowNav } from '../functions/showHeader';
+import { IoHomeOutline } from "react-icons/io5";
+import { IoPersonOutline } from "react-icons/io5";
+import { GoBook } from "react-icons/go";
 
 export const H = () => {
     const [screenSize, setScreenSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight
     });
+
+    const [hamburgerIsClick, setHamburgerIsClick] = useState(false);
 
     const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
     const [temp, setTemp] = useState('');
@@ -47,8 +51,9 @@ export const H = () => {
 
     const phoneWidth = screenSize.width;
 
-    const [hamburgerIsClick, setHamburgerIsClick] = useState(false);
+    
 
+   
     const showDropdown = () => {
         setHamburgerIsClick(!hamburgerIsClick);
     }
@@ -58,13 +63,13 @@ export const H = () => {
     }
 
     var tempVar = "";
-    if (hamburgerIsClick) {
-        tempVar = "h-[35rem] p-10"
-    }
-    if (!hamburgerIsClick) {
-        tempVar = "h-0"
-    }
+    if (hamburgerIsClick)  tempVar = "h-[18rem] p-8";   
 
+    if (!hamburgerIsClick) tempVar = "h-0";
+    
+    if (phoneWidth > 550) tempVar = "h-0";
+    console.log(phoneWidth)
+   
 
     return (
         <p>
@@ -103,19 +108,22 @@ export const H = () => {
                 }
 
             </nav>
-            <div className={`bg-black bg-opacity-75 backdrop-blur-lg h-[0rem] z-10 w-screen duration-500 absolute ${tempVar}
-             flex flex-col justify-between text-gray-400 text-[4rem] font-semibold overflow-hidden
+            <div className={`bg-black bg-opacity-50 backdrop-blur-md h-[0rem] z-10 w-screen duration-500 absolute ${tempVar}
+             flex flex-col justify-between text-gray-400 text-[2rem] overflow-hidden
             `} onClick={leaveDropdown}>
               
-                    <NavLink to={'/'}>
+                    <NavLink to={'/'} className={'flex items-center gap-x-4'}>
+                    <IoHomeOutline />
                         <p className='hover:text-purple-700'>Home</p>
                     </NavLink>
-                    <hr className='border-2 border-gray-400' />
-                    <NavLink to={'/about'}>
+                    <hr className=' border-gray-400' />
+                    <NavLink to={'/about'} className={'flex items-center gap-x-4'}>
+                    <IoPersonOutline />
                         <p className='hover:text-purple-700'>About</p>
                     </NavLink>
-                    <hr className='border-2 border-gray-400' />
-                    <NavLink to={'/education'}>
+                    <hr className=' border-gray-400' />
+                    <NavLink to={'/education'} className={'flex items-center gap-x-4'}>
+                    <GoBook />
                         <p className='hover:text-purple-700'>Education</p>
                     </NavLink>              
             </div>

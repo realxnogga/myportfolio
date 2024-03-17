@@ -6,10 +6,10 @@ import { H } from "../components/nav"
 export const EducationPage = () => {
 
     return (
-        <>
+        <div className="bg-gray-800">
             <H/>
             <Education />
             <Foot />
-        </>
+        </div>
     )
 }
