@@ -1,14 +1,19 @@
 import { Fade, Zoom } from "react-awesome-reveal";
 
+import { tailwindText } from '../features/themeSlice';
+import { useSelector } from 'react-redux';
+
 export const Education = () => {
 
+        const tailwindTString = useSelector(tailwindText);  
+
         return (
-                <div className="h-fit w-screen bg-gray-700 flex  items-center justify-center">
+                <div className={`${tailwindTString.whitebg} h-fit w-screen bg-gray-700 flex  items-center justify-center`}>
                         <div className="h-fit min-h-[32rem] w-[70rem] my-12 max-w-[90%] flex flex-wrap justify-center items-center content-center flex-row gap-7">
 
 
                                 <Zoom>
-                                        <div className="bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col">
+                                        <div className={`${tailwindTString.semiwhitebg} ${tailwindTString.blacktext} bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col`}>
                                                 <Fade delay={200} fraction={0} cascade damping={1e-1}>
 
                                                         <h3 className='text-lg font-semibold'>LSPU - Los Banos</h3>
@@ -19,7 +24,7 @@ export const Education = () => {
                                 </Zoom>
                                 <Zoom>
 
-                                        <div className="bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col  ">
+                                <div className={`${tailwindTString.semiwhitebg} ${tailwindTString.blacktext} bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col`}>
                                         <Fade delay={200} fraction={0} cascade damping={1e-1}>
 
                                                 <h3 className='text-lg font-semibold'>MINHS - Masaya</h3>
@@ -31,7 +36,7 @@ export const Education = () => {
                                 </Zoom>
                                 <Zoom>
 
-                                        <div className={`bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col`}>
+                                <div className={`${tailwindTString.semiwhitebg} ${tailwindTString.blacktext} bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col`}>
                                         <Fade delay={200} fraction={0} cascade damping={1e-1}>
                                         
                                                 <h3 className='text-lg font-semibold'>NLGMINHS - San Antonio</h3>
@@ -42,7 +47,7 @@ export const Education = () => {
                                         </div>
                                 </Zoom>
                                 <Zoom>
-                                        <div className="bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col  ">
+                                <div className={`${tailwindTString.semiwhitebg} ${tailwindTString.blacktext} bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col`}>
                                         <Fade delay={200} fraction={0} cascade damping={1e-1}>
                                         
                                                 <h3 className='text-lg font-semibold'>SIES - San Isidro</h3>
