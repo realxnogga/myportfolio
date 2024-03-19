@@ -7,24 +7,29 @@ import { FaGithub } from "react-icons/fa";
 import { Tooltip } from 'flowbite-react';
 import { FloatingLabel } from 'flowbite-react';
 
+import { tailwindText } from '../features/themeSlice';
+import { useSelector } from 'react-redux';
+
 export const ContactMe = () => {
 
+    const tailwindTString = useSelector(tailwindText);
+
     return (
-        <div className="bg-gray-800 h-fit w-screen flex items-center justify-center">
+        <div className={`${tailwindTString.whitebg} bg-gray-800 h-fit w-screen flex items-center justify-center`}>
             
           
-            <div className='bg-gray-900 h-fit my-12 w-[50rem] max-w-[90%] flex flex-row justify-center flex-wrap'>
+            <div className={`${tailwindTString.semiwhitebg} bg-gray-900 h-fit my-12 w-[50rem] max-w-[90%] flex flex-row justify-center flex-wrap`}>
             
 
                 <form className=' h-full w-[25rem] p-10 flex flex-col justify-center gap-y-10' action="">
-                    <FloatingLabel className='text-gray-400' variant="standard" label="Full Name" />
-                    <FloatingLabel className='text-gray-400' variant="standard" label="Email" />
-                    <FloatingLabel className='text-gray-400' variant="standard" label="Message" />
+                    <FloatingLabel className={`${tailwindTString.blacktext} text-gray-400`} variant="standard" label="Full Name" />
+                    <FloatingLabel className={`${tailwindTString.blacktext} text-gray-400`} variant="standard" label="Email" />
+                    <FloatingLabel className={`${tailwindTString.blacktext} text-gray-400`} variant="standard" label="Message" />
                     <Button className='w-fit' outline gradientDuoTone="purpleToBlue">
                         Contact Me
                     </Button>
                 </form>
-                <div className=' h-full w-[25rem] flex flex-col justify-start gap-y-10 p-10 text-gray-400'>
+                <div className={`${tailwindTString.blacktext} h-full w-[25rem] flex flex-col justify-start gap-y-10 p-10 text-gray-400`}>
                     <section>
                         <h3 className='text-purple-700 text-2xl font-semibold'>Contact</h3>
                         <p>warrernlarios@gmail.com</p>
@@ -33,7 +38,7 @@ export const ContactMe = () => {
                         <h3 className='text-purple-700 text-2xl font-semibold'>Leave in</h3>
                         <p>lorem ipsum dfsdfksdf <br /> fgdfgjuhvdsf</p>
                     </section>
-                    <section className=' flex flex-row flex-wrap gap-x-5'>
+                    <section className={`flex flex-row flex-wrap gap-x-5`}>
                         <Tooltip content="Codewars" animation="duration-500">
                             <a href="https://www.codewars.com/users/Realxnogga">
                                 <SiCodewars className='text-gray-400 text-2xl hover:text-orange-400' />

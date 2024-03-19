@@ -97,11 +97,11 @@ export const Header = () => {
                     {
                         themestate ?
                             (
-                                <FaSun onClick={toggleTheme} className='text-[2.2rem] text-gray-400'/>          
+                                <FaSun onClick={toggleTheme} className='text-[1.8rem] mobile:text-[1.4rem] text-yellow-500'/>          
                             )
                             :
                             (
-                                <FaMoon onClick={toggleTheme} className='text-[2.2rem] text-gray-400'/>
+                                <FaMoon onClick={toggleTheme} className='text-[1.8rem] mobile:text-[1.4rem] text-gray-200'/>
                             )
                     }
                 </div>
