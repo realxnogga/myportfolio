@@ -52,13 +52,13 @@ export const ContactMe = () => {
                         </Tooltip>
 
                         <Tooltip content="Frontend Mentor" animation="duration-500">
-                            <a href="https://www.frontendmentor.io/profile/unknownhatdog">
+                            <a href="https://www.frontendmentor.io/profile/realxnogga">
                                 <SiFrontendmentor className='text-gray-400 text-2xl hover:text-green-300' />
                             </a>
                         </Tooltip>
 
                         <Tooltip content="GitHub" animation="duration-500">
-                            <a href="https://github.com/unknownhatdog">
+                            <a href="https://github.com/realxnogga">
                                 <FaGithub className='text-gray-400 text-2xl hover:text-black' />
                             </a>
                         </Tooltip>
