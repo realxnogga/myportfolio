@@ -16,7 +16,7 @@ export const Foot = () => {
     const tailwindTString = useSelector(tailwindText);
 
     return (
-        <Footer className={`${tailwindTString.semiwhitebg} relative !bg-gray-900 h-fit w-screen flex items-center justify-center p-10 rounded-none`}>
+        <Footer className={`${tailwindTString.purple} relative bg-gray-900 h-fit w-screen flex items-center justify-center p-10 rounded-none`}>
 
             <BackToTop />
 
@@ -25,7 +25,7 @@ export const Foot = () => {
          
                 <h3 className='font-bold text-[2rem] text-gray-400 mobile:text-[1rem]'>
                     
-                    Foolish <span className='text-purple-700'>Developer</span> </h3>
+                    Foolish Developer</h3>
                    
           
           

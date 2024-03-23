@@ -4,6 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoHomeOutline } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
 import { GoBook } from "react-icons/go";
+import { RxCross2 } from "react-icons/rx";
 
 import { toggle } from '../features/themeSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -28,7 +29,7 @@ export const Header = () => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
 
-            prevScrollPos > currentScrollPos ? setTemp('top-0') : setTemp('top-[-5rem]');
+            prevScrollPos > currentScrollPos ? setTemp('top-0') : setTemp('top-[-4rem]');
 
             setPrevScrollPos(currentScrollPos);
         };
@@ -40,7 +41,6 @@ export const Header = () => {
         };
     }, [prevScrollPos]);
 
-    console.log(temp)
 
     useEffect(() => {
         const handleResize = () => {
@@ -60,8 +60,6 @@ export const Header = () => {
     const phoneWidth = screenSize.width;
 
 
-
-
     const showDropdown = () => {
         setHamburgerIsClick(!hamburgerIsClick);
     }
@@ -73,10 +71,7 @@ export const Header = () => {
     var tempVar = "";
     if (hamburgerIsClick) tempVar = "h-[18rem] p-8";
 
-    if (!hamburgerIsClick) tempVar = "h-0";
-
-    if (phoneWidth > 550) tempVar = "h-0";
-    console.log(phoneWidth)
+    if (!hamburgerIsClick || temp != 'top-0' || phoneWidth > 550) tempVar = "h-0";
 
     const dispatch = useDispatch();
 
@@ -86,29 +81,30 @@ export const Header = () => {
 
     const themestate = useSelector(actualState);
 
-    console.log(themestate ? 'true' : 'false');
+    const tailwindTString = useSelector(tailwindText);
 
+    console.log(temp)
 
     return (
-        <p>
-            <nav className={`${temp} sticky bg-black bg-opacity-75 backdrop-blur-lg z-10 h-[5rem] w-screen flex flex-row justify-between items-center px-10`}>
+        <div className={`${temp} sticky z-10`}>
+            <nav className={`${tailwindTString.purple} relative bg-gray-900 h-[4rem] w-screen flex flex-row justify-between items-center px-10`}>
 
                 <div>
                     {
                         themestate ?
                             (
-                                <FaSun onClick={toggleTheme} className='text-[1.8rem] mobile:text-[1.4rem] text-yellow-500'/>          
+                                <FaSun onClick={toggleTheme} className='text-[1.8rem] mobile:text-[1.4rem] text-yellow-500' />
                             )
                             :
                             (
-                                <FaMoon onClick={toggleTheme} className='text-[1.8rem] mobile:text-[1.4rem] text-gray-200'/>
+                                <FaMoon onClick={toggleTheme} className='text-[1.8rem] mobile:text-[1.4rem] text-gray-200' />
                             )
                     }
                 </div>
                 {
                     phoneWidth >= 550 ?
                         (
-                            <div className='text-2xl text-gray-400 flex flex-row gap-x-10 font-thin '>
+                            <div className='text-2xl text-gray-400 flex flex-row gap-x-10'>
 
                                 <NavLink to={'/'}>
                                     <p className='hover:text-purple-700'>Home</p>
@@ -126,17 +122,29 @@ export const Header = () => {
                         )
                         :
                         (
-                            <FiMenu className='text-gray-400 hover:text-purple-700 text-[2rem]'
-                                onClick={showDropdown}
-                            />
+                            <>
+                                {
+                                    !hamburgerIsClick ?
+                                        (
+                                            <FiMenu className='text-gray-400 hover:text-purple-700 text-[2rem]'
+                                                onClick={showDropdown}
+                                            />
+                                        )
+                                        :
+                                        (
+                                            <RxCross2 className='text-gray-400 hover:text-purple-700 text-[2rem]'  onClick={showDropdown}/>
+                                        )
+                                }
+
+                            </>
 
 
                         )
                 }
 
             </nav>
-            <div className={`bg-black bg-opacity-50 backdrop-blur-md h-[0rem] z-10 w-screen duration-500 absolute ${tempVar}
-             flex flex-col justify-between text-gray-400 text-[2rem] overflow-hidden
+            <div className={`${themestate ? tailwindTString.purpledropdown : tailwindTString.darkdropdown} h-[0rem] z-10 w-screen duration-500 absolute ${tempVar}
+             flex flex-col justify-between text-white text-[2rem] overflow-hidden
             `} onClick={leaveDropdown}>
 
                 <NavLink to={'/'} className={'flex items-center gap-x-4'}>
@@ -154,6 +162,6 @@ export const Header = () => {
                     <p className='hover:text-purple-700'>Education</p>
                 </NavLink>
             </div>
-        </p>
+        </div>
     )
 }
