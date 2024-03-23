@@ -1,4 +1,4 @@
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Fade, Zoom, Slide } from "react-awesome-reveal";
 
 import { tailwindText } from '../features/themeSlice';
 import { useSelector } from 'react-redux';
@@ -12,7 +12,7 @@ export const Education = () => {
                         <div className="h-fit min-h-[32rem] w-[70rem] my-12 max-w-[90%] flex flex-wrap justify-center items-center content-center flex-row gap-7">
 
 
-                                <Zoom>
+                                <Slide direction="left">
                                         <div className={`${tailwindTString.semiwhitebg} ${tailwindTString.blacktext} bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col`}>
                                                 <Fade delay={200} fraction={0} cascade damping={1e-1}>
 
@@ -21,8 +21,8 @@ export const Education = () => {
                                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, placeat tenetur!</p>
                                                 </Fade>
                                         </div>
-                                </Zoom>
-                                <Zoom>
+                                </Slide>
+                                <Slide direction="right">
 
                                 <div className={`${tailwindTString.semiwhitebg} ${tailwindTString.blacktext} bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col`}>
                                         <Fade delay={200} fraction={0} cascade damping={1e-1}>
@@ -33,8 +33,8 @@ export const Education = () => {
                                                 </Fade>
                                         
                                         </div>
-                                </Zoom>
-                                <Zoom>
+                                </Slide>
+                                <Slide direction="left">
 
                                 <div className={`${tailwindTString.semiwhitebg} ${tailwindTString.blacktext} bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col`}>
                                         <Fade delay={200} fraction={0} cascade damping={1e-1}>
@@ -45,8 +45,8 @@ export const Education = () => {
                                                 </Fade>
                                         
                                         </div>
-                                </Zoom>
-                                <Zoom>
+                                </Slide>
+                                <Slide direction="right">
                                 <div className={`${tailwindTString.semiwhitebg} ${tailwindTString.blacktext} bg-gray-800 h-fit min-h-[11rem] max-w-[32rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] text-gray-400 p-4 flex flex-col`}>
                                         <Fade delay={200} fraction={0} cascade damping={1e-1}>
                                         
@@ -56,7 +56,7 @@ export const Education = () => {
                                                 </Fade>
                                         
                                         </div>
-                                </Zoom>
+                                </Slide>
 
                         </div>
 

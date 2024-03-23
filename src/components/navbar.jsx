@@ -71,7 +71,7 @@ export const Header = () => {
     var tempVar = "";
     if (hamburgerIsClick) tempVar = "h-[18rem] p-8";
 
-    if (!hamburgerIsClick || temp != 'top-0' || phoneWidth > 550) tempVar = "h-0";
+    if (!hamburgerIsClick || temp == 'top-[-4rem]' || phoneWidth > 550) tempVar = "h-0";
 
     const dispatch = useDispatch();
 
@@ -82,8 +82,6 @@ export const Header = () => {
     const themestate = useSelector(actualState);
 
     const tailwindTString = useSelector(tailwindText);
-
-    console.log(temp)
 
     return (
         <div className={`${temp} sticky z-10`}>
