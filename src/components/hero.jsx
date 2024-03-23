@@ -1,10 +1,7 @@
 
-import { Carousel } from 'flowbite-react';
 import { Button } from 'flowbite-react';
 import { NavLink } from 'react-router-dom';
-
-import { ChangeText } from '../functions/changetext';
-
+import { TypeAnimation } from 'react-type-animation';
 import { tailwindText } from '../features/themeSlice';
 import { useSelector } from 'react-redux';
 
@@ -12,17 +9,13 @@ export const Hero = () => {
 
   const tailwindTString = useSelector(tailwindText);
 
-  const textValue = {
-    Text1: 'Warren',
-    Text2: 'Learner',
-    Text3: 'Student',
-  }
+
 
   return (
 
 
     <div className={`${tailwindTString.whitebg} h-[40rem] w-screen bg-cover bg-center p-5 flex flex-row tablet:h-[30rem] mobile:h-[25rem] tablet:flex-col`}
-    style={{ backgroundImage: `url(${require('../assets/bgimage/bg.svg')})` }}
+      style={{ backgroundImage: `url(${require('../assets/bgimage/bg.svg')})` }}
     >
 
       <section className='h-full w-full flex items-center justify-center'>
@@ -36,9 +29,21 @@ export const Hero = () => {
 
         <p className={`${tailwindTString.blacktext} text-gray-400 font-semibold text-[4rem] tablet:text-center tablet:text-[2.5rem] mobile:text-lg`}>
           <p>
-
-            I'm <span className='mobile:text-[3rem] font-bold text-[4rem] text-purple-700 '>
-              <ChangeText {...textValue} /> </span>
+        
+                <TypeAnimation
+                  sequence={[
+                    `I am Warren`,
+                    5000,
+                    'I am a student',
+                    5000,
+                    'I am a Learner',
+                    5000,
+                  ]}
+                  wrapper={"span"}
+                  speed={40}
+                  style={{ display: 'inline-block', fontSize: '2.5rem', color: '#7E22CE'}}
+                  repeat={Infinity}
+                />
 
           </p>
           <p>
